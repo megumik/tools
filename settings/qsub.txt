@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -q cdb
+#PBS -N job
+#PBS -j oe
+#PBS -l select=1:ncpus=1:mem=2gb
+# 2018/m/d megumik
+
+set -Ceu -o pipefail
+
+source /etc/profile.d/modules.sh
+module load Python/3.6
+
+cd $PBS_O_WORKDIR
+
+# main
